@@ -1,0 +1,103 @@
+<!doctype html>
+   <head>
+      <link href="DropdownCSS.css" type="text/css" rel="stylesheet" />
+
+      <style type="text/css">
+         #canvas{
+            background-image: url('./Pictures/RoyalDrive.jpg');
+            //background-image: url('./Pictures/DrivewIggy.jpg');
+            background-size: 100% 100%;
+            padding: 35px;
+            margin-top: 40px;
+            margin-left: 15%;
+            margin-right: 40%;
+            border: 10px solid black;
+         }
+         .container{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.2);
+         }
+         #NextLevel{
+            margin-left: 60%;
+            font-size: 15px;
+            background-color: rgba(102, 51, 153, 1);
+         }
+
+      </style>
+      <script type="text/javascript">
+         document.addEventListener("DOMContentLoaded", init, false);
+         function init()
+         {
+            var canvas = document.getElementById("canvas");
+            canvas.addEventListener("mousedown", getPosition, false);
+         }
+
+         function getPosition(event)
+         {
+            var x = new Number();
+            var y = new Number();
+            var canvas = document.getElementById("canvas");
+
+            if (event.x != undefined && event.y != undefined)
+            {
+               x = event.x;
+               y = event.y;
+            }
+            else // Firefox method to get the position
+            {
+               x = event.clientX + document.body.scrollLeft +
+                  document.documentElement.scrollLeft;
+               y = event.clientY + document.body.scrollTop +
+                  document.documentElement.scrollTop;
+            }
+
+            x -= canvas.offsetLeft;
+            y -= canvas.offsetTop;
+
+            //alert("x: " + x + "  y: " + y);
+            if((18 < x && x < 52) && (280 < y && y < 320))
+            {
+               alert("You found IGGY! Click Next Level to go on");
+            }
+         }
+
+      </script>
+
+   </head>
+
+   <body>
+      <div class="container">
+
+         <div class="rightSide">
+            <h2> FIND IGGY GAME</h2>
+               <p> Look for Iggy  in the pictures of The University of Scranton campus.
+                  When you find him, click on him to go to the next level. Have fun and
+                  enjoy our campus!<br>
+                  <img src = "Pictures/Iggy.jpg" height="75" width="60">
+               </p>
+               <p> Level 2/5</p>
+         </div>
+
+         <ul>
+            <li><a class="" href="index.html">Home</a></li>
+            <li><a class="" href="Guestbook.php">Guestbook</a></li>
+            <li><a class="" href="FindIggyStart.html">Find Iggy Game</a></li>
+         </ul>
+         <canvas id="canvas" width="640" height="360"></canvas>
+
+         <button id="NextLevel">Next Level</button>
+         <script type="text/javascript">
+            document.getElementById("NextLevel").onclick = function()
+            {
+               location.href = "FindIggy3.html";
+            };
+         </script>
+
+      </div>
+
+  </body>
+</html>
