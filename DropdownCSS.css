@@ -78,3 +78,15 @@
             color: white;
             border-radius: 25px;
          }
+
+         .rules{
+            position:absolute;
+            top: 150px;
+            right: 20px;
+            width: 350px;
+            padding: 10px;
+            background-color: rgba(102, 51, 153, 0.8);
+            padding: 10px;
+            color: white;
+            border-radius: 25px;
+         }
