@@ -1,0 +1,122 @@
+* {
+   box-sizing: border-box;
+}
+
+@media only screen and (min-width: 768px) {
+   .main {
+      top: 50px;
+      position: relative;
+      max-width: 75%;
+      max-height: 50%;
+      overflow: scroll;
+      background-color: white;
+      padding: 10px 25px;
+      left: 0;
+      margin-right: 20%;
+      margin-left: auto;
+      border-radius: 5%;
+      border-width: medium;
+      border-style: solid;
+      border-color: gray;
+   }
+
+   .contact {
+      top: 50px;
+      position: relative;
+      max-width: 75%;
+      max-height: 50%;
+      overflow: scroll;
+      background-color: white;
+      padding: 10px 25px;
+      left: 0;
+      right: 0;
+      margin-right: auto;
+      margin-left: auto;
+      border-radius: 1em;
+      border-width: medium;
+      border-style: solid;
+      border-color: gray;
+   }
+
+   .navbar {
+      overflow: hidden;
+      background-color: #429bf4;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      font-size: 18px;
+      z-index: 10;
+      margin: 0;
+      padding: 0;
+   }
+
+   .navbar a {
+      float: right;
+      display: block;
+      color: #dbd9d9;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      margin-right: 15px;
+   }
+
+   .navbar a:hover {
+      background: #2cd6cd;
+      color: white;
+   }
+
+   .info {
+      position:absolute;
+      top: 60px;
+      right: 70px;
+      padding: 2px;
+      background-color: #429bf4;
+      color: white;
+      border-radius: 25px;
+      border-width: medium;
+      border-style: solid;
+      border-color: gray;
+      overflow: scroll;
+   }
+
+   .headshot {
+      height: 200px;
+      width: 140px;
+      margin: 0 auto;
+   }
+
+   #headshot {
+      height: 200px;
+      width: 140px;
+      border-radius: 20px;
+   }
+
+   .Welcome{
+      background-color: rgba(218,195,150, 0.8);
+      padding: 10px;
+      color: black;
+      border-radius: 25px;
+      font-family: cursive;
+   }
+
+   .guestbook{
+      top: 50px;
+      position: relative;
+   }
+
+   body {
+      background-color: lightblue;
+   }
+
+   div {
+
+   }
+
+   h1, h2, h3 {
+      text-align: center;
+   }
+
+   p {
+
+   }
+}

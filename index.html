@@ -1,156 +1,53 @@
+<!DOCTYPE html>
 <html>
    <head>
-      <link href="DropdownCSS.css" type="text/css" rel="stylesheet" />
+      <title>Daniel Herrick's Website</title>
 
-      <style>
-         body {
-            margin-right: 0px;
-            margin-left: 0px;
-            margin-top: 10px;
-         }
-         /* ============================================================
-               PRIMARY STRUCTURE
-            ============================================================ */
-         .container {
-            max-width: 960px;
-            margin: 0 auto;
-         }
-         /* ============================================================
-                 SECTIONS
-            ============================================================ */
-         section.module:last-child {
-            margin-bottom: 0;
-         }
-         section.module h2 {
-            margin-bottom: 0px;
-            font-family: "Roboto Slab", serif;
-            font-size: 30px;
-         }
-         section.module p {
-            margin-bottom: 0px;
-            font-size: 16px;
-            font-weight: 300;
-         }
-         section.module p:last-child {
-            margin-bottom: 0;
-         }
-         section.module.content {
-            padding: 10px 0;
-         }
-         section.module.parallax {
-            height: 600px;
-            background-position: 50% 50%;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-         }
-         section.module.parallax h1 {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 48px;
-            line-height: 600px;
-            font-weight: 700;
-            text-align: center;
-            text-transform: uppercase;
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-         }
-         section.module.parallax-1 {
-            background-image: url('./Pictures/DeNaples.jpg');
-         }
-         section.module.parallax-2 {
-            background-image: url('./Pictures/Ignatius.jpg');
-         }
-         section.module.parallax-3 {
-            background-image: url('./Pictures/LSC.jpg');
-         }
+      <link href="style.css" type="text/css" rel="stylesheet">
 
-         @media all and (min-width: 600px) {
-            section.module h2 {
-               font-size: 42px;
-            }
-            section.module p {
-               font-size: 20px;
-            }
-            section.module.parallax h1 {
-               font-size: 96px;
-            }
-         }
-         @media all and (min-width: 960px) {
-            section.module.parallax h1 {
-               font-size: 160px;
-            }
-         }
-         .inner {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            text-align: center;
-         }
-      </style>
       <script>
-
       </script>
    </head>
-   <title>Daniel Herrick's Website</title>
-
    <body>
-      <div class="rightSide">
-         <img src=Pictures/Headshot1.jpg alt="Headshot" height="320" align=right>
-         <h1>Basic Info</h1>
-         <p> Name: Daniel Herrick </p>
-         <p> Graduate of The University of Scranton </p>
-         <p> Bachelor's of Science: Computer Science Class of 2018</p>
-         <p> Bachelor's of Science: Psychology Class of 2014</p>
-
+      <nav class="navbar">
+         <a style="float: left;" href="./index.html">Daniel Herrick</a>
+         <a href="./contact.html">Contact Me</a>
+         <a href="./Guestbook.php">Guestbook</a>
+         <a href="https://github.com/Herrick-D/">GitHub repos</a>
+      </nav>
+      <div class="info">
+         <div class="headshot">
+            <img id="headshot" src=assets/Headshot1.jpg alt="Headshot">
+         </div>
       </div>
-      <ul>
-         <li><a class="" href="index.html">Home</a></li>
-         <li><a class="" href="Guestbook.html">Guestbook</a></li>
-         <li><a class="" href="FindIggyStart.html">Find Iggy Game</a></li>
-      </ul>
-
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <section class="module parallax parallax-1">
-         <div class="container">
-            <h1>DeNaples</h1>
+      <div class="main">
+         <h1>Welcome</h1>
+         <div>
+            <h2>Introduction</h2>
+            <p>My name is Dan Herrick. I am a two-time graduate of the University of Scranton, holding Bachelor's of Science degrees in Psychology (Class of 2014) and Computer Science (Class of 2018). </p>
          </div>
-      </section>
-
-      <section class="module content">
-         <div class="container inner">
-            <h2>DeNaples Center</h2>
-               <p>This is the DeNaples Center which houses our First and Third Floor Dining Halls,
-                  the Student Forum, Campus Ministries, and other offices and areas for students to
-                  use and enjoy.</p>
+         <div>
+            <h2>Projects</h2>
+            <p>My GitHub repositories can be found <a href="https://github.com/Herrick-D/">here</a>, but let me give a brief rundown of what's there and not there.
+            </p>
+            <h3>Study Abroad Mobile App</h3>
+            <p>This project was for my senior capstone project. I wanted to learn a little about mobile development, and through my work with the University of Scranton's Study Abroad Office I saw a need for an app like this. The intent is to bring as much of the research students and travelers do before a long trip to another country to one easy to use app.<br>
+               There are four main features to the app, a Packing List, Places to Visit, a Budget Tracker, and a Document Vault.<br>
+               The Packing List and Places to Visit features allow users to search through what others have shared in order to make packing easier and planning fun excursions while abroad based on the experiences of others.<br>
+               The Budget Tracker allows users to keep track of their spending during their trip so they have enough money to make it home.<br>
+               The Document Vault is meant for users to keep copies of their travel documents in a safe, offline environment. In the Study Abroad Office we often instructed students to make copies of their travel documents and put them in their Google Drive, but there is always the possibility of not having an internet connection, so having an offline place on their phone to store these documents can help in the event of lost or stolen documents.
+            </p>
+            <h3>Ciphers</h3>
+            <p>This project was just a fun little side project I did in order to challenge myself with ciphers. The way this one works is the user enters a message and a number that is the key. The message is converted to numbers based on the key. The user can then share that numerical message along with the key with a friend, who would decode that message by inputting the numerical message, and the key to get the original message.
+            </p>
+            <h3>Other Projects</h3>
+            <p>Through the course of my computer science degree I worked on projects using mostly Java and C, but I have had assignments using Prolog, LISP, Verilog, SQL (using PostgreSQL), and HTML, CSS, JavaScript, and PHP. In some of my courses I've had the opportunity to play around with the network security tool NMAP and penetration testing tools with Kali, and I got to try out Tails OS. In my database class I worked with a team to create a hiking application in order to learn proper database design and programming using a PostgreSQL server and Maven for dependencies.</p>
          </div>
-      </section>
-
-      <section class="module parallax parallax-2">
-         <div class="container">
-            <h1>Ignatius</h1>
+         <br>
+         <div>
+            <h2>Achievements</h2>
+            <p>During my computer science program I was able to maintain a GPA high enough to be inducted into the Upsilon Pi Epsilon International Honor Society while working two jobs and enrolled in classes full-time.</p>
          </div>
-      </section>
-
-      <section class="module content">
-         <div class="container inner">
-            <h2>Statue of Ignatius</h2>
-               <p>This is a statue of Saint Ignatius, the founder of the Jesuit tradition. This
-                  statue depicts his famous act of offering his sword to God.</p>
-         </div>
-      </section>
-
-      <section class="module parallax parallax-3">
-         <div class="container">
-            <h1>LSC</h1>
-         </div>
-      </section>
-
-      <section class="module content">
-         <div class="container inner">
-            <h2>Loyola Science Center</h2>
-               <p>This is Loyola Science Center where a large number of our students spend most of their
-                  undergraduate careers.</p>
-         </div>
-      </section>
+      </div>
    </body>
-
 </html>

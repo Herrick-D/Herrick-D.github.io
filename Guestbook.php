@@ -1,45 +1,26 @@
+<!DOCTYPE html>
 <html>
    <head>
-      
-      <script type="text/javascript">// <![CDATA[
+      <title>Daniel Herrick's Website</title>
+      <script type="text/javascript">
          function Validate()
          {
-            var fname=document.form["fname"].value;
-            var lname=document.form["lname"].value;
-            var city =document.form["city"].value;
+            var fname=document.form["name"].value;
             var state=document.form["state"].value;
 
-            if(fname==null || fname=="")
-            {
-               alert("Please enter your First Name! ");
-               return false;
-            }
-            if(lname==null || lname=="")
-            {
-               alert("Please enter your Last Name!");
-               return false;
-            }
-            if(city == null || city = ""){
-               alert("Please enter you city! ");
+            if(name==null || name==""){
+               alert("Please enter your Name! ");
                return false;
             }
             if(state==null || state = ""){
                alert("Please enter your state!");
                return false;
             }
-            
-        </script>
-            <link href="DropdownCSS.css" type="text/css" rel="stylesheet" />
-            
-        <style>
-         body{
-            background-image: url('./Pictures/Journal.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            margin-top: 10px;
-            margin-right: 60px;
          }
+
+        </script>
+        <link href="style.css" type="text/css" rel="stylesheet">
+        <style>
          .Form, .Previous{
             margin: 10px;
             background-color: rgba(218,195,150, 0.4);
@@ -48,73 +29,43 @@
             border-radius: 25px;
             font-family: cursive;
          }
-        </style>    
-      
+        </style>
    </head>
-   <title>Daniel Herrick's Website</title>
+
    <body>
-      <ul>
-               <li><a class="" href="index.html">Home</a></li>
-               <li class="dropdown">
-                  <a href="#" class="dropbtn">Guestbook</a>
-                  <div class="dropdown-content">
-                     <a href="Guestbook.php">Guestbook PHP</a>
-                     <a href="guestbookJSON.php">Guestbook JSON</a>
-                  </div>
-               </li>
-               <li class="dropdown">
-                  <a href="#" class="dropbtn">Assignments</a>
-                  <div class="dropdown-content">
-                     <a href="http://www.cs.scranton.edu/~herrickd2/assignment1/">Assignment1</a>
-                     <a href="regularExpressions.php">Regular Expressions</a>
-                  </div>
-               </li>
-               <li class="dropdown">
-                  <a href="#" class="dropbtn">Javascript</a>
-                  <div class="dropdown-content">
-                     <a href="DigitalClock.html">Digital Clock</a>
-                     <a href="HitCounter.html">Hit Counter</a>
-                  </div>
-               </li>
-               <li><a class="" href="FindIggyStart.html">Find Iggy Game</a></li>
-            </ul>
-      
-      <h1>Guestbook</h1>
-      
+      <nav class="navbar">
+         <a style="float: left;" href="./index.html">Daniel Herrick</a>
+         <a href="./contact.html">Contact Me</a>
+         <a href="./Guestbook.php">Guestbook</a>
+         <a href="https://github.com/Herrick-D/">GitHub repos</a>
+      </nav>
+      <div class="guestbook">
       <div class="Form">
+         <h1>Guestbook</h1>
       <form method="post" action="Guestbook1.php" onsubmit="return Validate();">
-         <p>First Name: <input type ="text" size=25 name="fname" required></p>
-         <p>Last Name: <input type="text" size=25 name="lname" required></p>
-         <p>City: <input type="text" name="city" required></p>
-         <p>State: <input type="text" name="state" required></p>
+         <p>Name: <input type ="text" size=25 name="name" required></p>
+         <p>State: &nbsp;&nbsp;<input type="text" size=25 name="state" required></p>
          <p><input type="submit" value="Submit"></p>
       </form>
       </div>
-      
+
       <div class="Previous">
-     <h1>Previous Guests:</h1>
+      <h1>Previous Guests:</h1>
          <?php
-	         $contents = file_get_contents("Guestbook.txt"); //??file("Guestbook.txt"'
+	         $contents = file_get_contents("Guestbook.txt");
 	         $guests = explode("\n", $contents);
-	
-	         foreach($guests as $guest){ //??foreach($contents as $guest);
-	         	list($fname,$lname,$city,$state) = explode("\t", $guest);
-	         	echo "First Name: " . "$fname <br>";
-	         	echo "Last Name: " . "$lname <br>";
-               echo "City: " . "$city <br>";
+            if(! isset($guests[1])){
+               $guests[1] = null;
+            }
+	         foreach($guests as $guest){
+	            list($name,$state) = explode("\t", $guest);
+	         	echo "Name: " . "$name <br>";
                echo "State: " . "$state <br>";
 	         	echo "<br>";
-               
             }
 
-	
-	         	         	 
-	         	
          ?>
-         
-         <div>
-
-      
-       <a href="Guestbook.phps">Guestbook Script</a>
+      </div>
+      </div>
    </body>
 </html>
