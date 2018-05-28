@@ -7,7 +7,9 @@
       <nav class="navbar">
          <a style="float: left;" href="./index.html">Daniel Herrick</a>
          <a href="./contact.html">Contact Me</a>
+         <!--
          <a href="./Guestbook.php">Guestbook</a>
+      -->
          <a href="https://github.com/Herrick-D/">GitHub repos</a>
       </nav>
       <div class="guestbook">
